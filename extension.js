@@ -54,9 +54,9 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "basicBot",
-        language: "english",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        botName: "Bot Move-it",
+        language: "portuguese",
+        chatLink: "https://rawgit.com/Shadow-Slayer/moveit/master/lang/pt.json",
         startupCap: 1, // 1-200
         startupVolume: 0, // 0-100
         startupEmoji: false, // true or false
@@ -64,7 +64,7 @@
         smartSkip: true,
         cmdDeletion: true,
         maximumAfk: 120,
-        afkRemoval: true,
+        afkRemoval: false,
         maximumDc: 60,
         bouncerPlus: true,
         blacklistEnabled: true,
@@ -73,15 +73,15 @@
         maximumLocktime: 10,
         cycleGuard: true,
         maximumCycletime: 10,
-        voteSkip: false,
-        voteSkipLimit: 10,
-        historySkip: false,
+        voteSkip: true,
+        voteSkipLimit: 6,
+        historySkip: true,
         timeGuard: true,
-        maximumSongLength: 10,
+        maximumSongLength: 7,
         autodisable: true,
         commandCooldown: 30,
         usercommandsEnabled: true,
-        skipPosition: 3,
+        skipPosition: 1,
         skipReasons: [
             ["theme", "This song does not fit the room theme. "],
             ["op", "This song is on the OP list. "],
@@ -89,34 +89,40 @@
             ["mix", "You played a mix, which is against the rules. "],
             ["sound", "The song you played had bad sound quality or no sound. "],
             ["nsfw", "The song you contained was NSFW (image or sound). "],
-            ["unavailable", "The song you played was not available for some users. "]
+            ["unavailable", "The song you played was not available for some users. "],
+            ["som", "A música tocada tinha qualidade de som ruim ou não tinha som. "],
+            ["tema", "Sua música não estava de acordo com o tema da sala. "],
+            ["op", "Essa música está na lista OP. "],
+            ["tocada", "Sua música já foi tocada recentememnte. "],
+            ["nudes", ":underage: A música continha conteudo impróprio NSFW :underage:"],
+            ["ind", "A música não estava disponivel para alguns usuários"]
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
         motdEnabled: false,
         motdInterval: 5,
         motd: "Temporary Message of the Day",
-        filterChat: true,
+        filterChat: false,
         etaRestriction: false,
         welcome: true,
         opLink: null,
-        rulesLink: null,
-        themeLink: null,
-        fbLink: null,
+        rulesLink: "http://goo.gl/Nw0Jth",
+        themeLink: "http://goo.gl/Nw0Jth",
+        fbLink: "http://goo.gl/gGsuJQ",
         youtubeLink: null,
-        website: null,
-        intervalMessages: [],
-        messageInterval: 5,
+        website: "http://goo.gl/O4tlVo",
+        intervalMessages: [":game_die: Hora de fazer a roleta! :game_die: @staff",":large_orange_diamond: Faltam 2 músicas para a roleta :large_orange_diamond:",":large_orange_diamond: Na roleta voce pode tanto ganhar posições, como tambem perder!!! :large_orange_diamond:"],
+        messageInterval: 2,
         songstats: true,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/NSFWlist.json",
-            OP: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/OPlist.json",
+            NSFW: "https://rawgit.com/Shadow-Slayer/moveit/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://rawgit.com/Shadow-Slayer/moveit/master/blacklists/ExampleOPlist.json",
             BANNED: "https://rawgit.com/" + fork + "/basicBot-customization/master/blacklists/BANNEDlist.json"
         }
     }));
 
     //Start the bot and extend it when it has loaded.
-    $.getScript("https://rawgit.com/Yemasthui/basicBot/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/Shadow-Slayer/bot/master/basicBot.js", extend);
 
 }).call(this);
