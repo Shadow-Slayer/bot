@@ -1906,7 +1906,7 @@
             },
 
             cookieCommand: {
-                command: 'cookie',
+                command: ['cookie','biscoito'],
                 rank: 'user',
                 type: 'startsWith',
                 getCookie: function (chat) {
@@ -2404,7 +2404,7 @@
 
             killCommand: {
                 command: 'kill',
-                rank: 'bouncer',
+                rank: 'manager',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2865,7 +2865,7 @@
 
             reloadCommand: {
                 command: 'reload',
-                rank: 'bouncer',
+                rank: 'manager',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2935,7 +2935,7 @@
             },
 
             rouletteCommand: {
-                command: 'roulette',
+                command: ['roulette','roleta'],
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2950,7 +2950,7 @@
             },
 
             rulesCommand: {
-                command: 'rules',
+                command: ['rules','regras'],
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
