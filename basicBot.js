@@ -765,7 +765,9 @@
                         var messageNumber = basicBot.room.roomstats.songCount % basicBot.settings.intervalMessages.length;
                         msg = basicBot.settings.intervalMessages[messageNumber];
                     }
-                    API.sendChat('/me ' + msg);
+                    setTimeout(function (user) {
+                        API.sendChat('/me ' + msg);
+                    }, 3 * 1000, user);
                 }
             },
             updateBlacklists: function () {
