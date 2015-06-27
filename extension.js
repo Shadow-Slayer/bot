@@ -94,7 +94,7 @@
             ["tema", "Sua música não estava de acordo com o tema da sala. "],
             ["op", "Essa música está na lista OP. "],
             ["tocada", "Sua música já foi tocada recentememnte. "],
-            ["nudes", ":underage: A música continha conteudo impróprio NSFW :underage:"],
+            ["nudes", "A música continha conteudo impróprio NSFW :underage:"],
             ["ind", "A música não estava disponivel para alguns usuários"]
         ],
         afkpositionCheck: 15,
