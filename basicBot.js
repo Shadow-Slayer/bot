@@ -765,9 +765,7 @@
                         var messageNumber = basicBot.room.roomstats.songCount % basicBot.settings.intervalMessages.length;
                         msg = basicBot.settings.intervalMessages[messageNumber];
                     }
-                    setTimeout(function (user) {
-                        API.sendChat('/me ' + msg);
-                    }, 3 * 1000, user);
+                    API.sendChat('/me ' + msg);
                 }
             },
             updateBlacklists: function () {
@@ -1908,7 +1906,7 @@
             },
 
             cookieCommand: {
-                command: ['cookie','biscoito'],
+                command: 'cookie',
                 rank: 'user',
                 type: 'startsWith',
                 getCookie: function (chat) {
@@ -2406,7 +2404,7 @@
 
             killCommand: {
                 command: 'kill',
-                rank: 'manager',
+                rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2867,7 +2865,7 @@
 
             reloadCommand: {
                 command: 'reload',
-                rank: 'manager',
+                rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2937,7 +2935,7 @@
             },
 
             rouletteCommand: {
-                command: ['roulette','roleta'],
+                command: 'roulette',
                 rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2952,7 +2950,7 @@
             },
 
             rulesCommand: {
-                command: ['rules','regras'],
+                command: 'rules',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
