@@ -1627,8 +1627,8 @@
 			}, 8 * 60 * 1000);
 			basicBot.loggedInID = API.getUser().id;
 			basicBot.status = true;
-			API.sendChat('/cap ' + basicBot.settings.startupCap);
-			API.setVolume(basicBot.settings.startupVolume);
+			/*API.sendChat('/cap ' + basicBot.settings.startupCap);
+			API.setVolume(basicBot.settings.startupVolume);*/
 			if (basicBot.settings.autowoot) {
 				$("#woot").click();
 			}
