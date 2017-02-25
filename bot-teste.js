@@ -3187,7 +3187,7 @@
 							name = msg.substring(cmd.length + 2, lastSpace);
 						}
 						var user = basicBot.userUtilities.lookupUser(id);
-						if (typeof user.id === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
+						if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
 						if (user.id === basicBot.loggedInID) return API.sendChat(subChat(basicBot.chat.addbotwaitlist, {name: chat.un}));
 						if (!isNaN(pos)) {
 							API.sendChat(subChat(basicBot.chat.move, {name: chat.un}));
