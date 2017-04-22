@@ -310,7 +310,7 @@
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json",
-                OP: "https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json",
+                OP: "https://rawgit.com/Shadow-Slayer/bot/gh-pages/op.json",
                 BANNED: "https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json"
             }
         },
